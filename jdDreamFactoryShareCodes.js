@@ -8,7 +8,7 @@
 // 同一个京东账号的好友互助码用@符号隔开,不同京东账号之间用&符号或者换行隔开,下面给一个示例
 // 如: 京东账号1的shareCode1@京东账号1的shareCode2&京东账号2的shareCode1@京东账号2的shareCode2
 let shareCodes = [
-  'V5LkjP4WRyjeCKR9VRwcRX0bBuTz7MEK0-E99EJ7u0k=@Bo-jnVs_m9uBvbRzraXcSA==@-OvElMzqeyeGBWazWYjI1Q==',//账号一的好友shareCode,不同好友中间用@符号隔开
+  '2D5LaBD49uSbIXJXv_KOyg==@98oenwEPPsytvbZP6YLnJQ==@P-Hku4bbekfiKwOPdpTCEg==@_lEnmNHTyqNT_3FuiFQcOw==@V5LkjP4WRyjeCKR9VRwcRX0bBuTz7MEK0-E99EJ7u0k=@Bo-jnVs_m9uBvbRzraXcSA==@-OvElMzqeyeGBWazWYjI1Q==',//账号一的好友shareCode,不同好友中间用@符号隔开
   '1uzRU5HkaUgvy0AB5Q9VUg==@PDPM257r_KuQhil2Y7koNw==@-OvElMzqeyeGBWazWYjI1Q==',//账号二的好友shareCode，不同好友中间用@符号隔开
 ]
 // 判断github action里面是否有京喜工厂互助码
@@ -22,7 +22,7 @@ if (process.env.DREAM_FACTORY_SHARE_CODES) {
   } else {
     shareCodes = process.env.DREAM_FACTORY_SHARE_CODES.split();
   }
-} else if (process.env.DREAM_FACTORY_SHARE_CODES) {
+} else if (process.env.JD_COOKIE) {
   console.log(`由于您secret里面未提供助力码，故此处运行将会给脚本内置的码进行助力，请知晓！`)
 }
 for (let i = 0; i < shareCodes.length; i++) {
